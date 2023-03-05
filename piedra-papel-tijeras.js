@@ -7,7 +7,7 @@ let derrotas = 0
 
 //Funcion para sacar un numero del 1 al 3
 function aleatorio(min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 //funcion para mostrar la eleccion
@@ -32,7 +32,7 @@ function duelo(jugador, pc){
     if(jugador == pc) { 
         resultadoDuelo = "empate"
     } else if(jugador == 1 && pc == 3 || jugador == 3 && pc == 2 || jugador == 2 && pc == 1) {
-        victorias = victorias + 1;
+        victorias = victorias + 1 ;
         resultadoDuelo = "ganaste"
     } else {
         derrotas = derrotas + 1
